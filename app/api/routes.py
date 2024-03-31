@@ -1,11 +1,8 @@
-from fastapi import APIRouter, Request, HTTPException
+from fastapi import APIRouter
 from fastapi.responses import FileResponse
 
-from app.core.serivce import process_request
+from app.core.service.processor import process_request
 from app.models.schemas import BusinessInput
-from app.core.google_api import GooglePlacesAPI
-from app.core.data_processing import extract_business_data
-from app.core.csv_generator import generate_csv
 
 router = APIRouter()
 
